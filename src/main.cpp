@@ -58,7 +58,7 @@ void breathe() {
   //   analogWrite(1, breathe_PWM);
   // }
 
-  if(millis() - breathe_old > 20) {
+  if(millis() - breathe_old > 1000) {
     breathe_old = millis();
     if(blink_status)  PORTB &=~ (1<< DDB1);
     else PORTB |= (1 << DDB1);
